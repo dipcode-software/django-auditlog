@@ -138,7 +138,7 @@ def model_instance_diff(old, new):
             diff_name = field.name
             if hasattr(field, 'verbose_name'):
                 diff_name = field.verbose_name
-            diff[unicode(diff_name)] = (smart_text(old_value), smart_text(new_value))
+            diff[str(diff_name)] = (smart_text(old_value), smart_text(new_value))
 
     if len(diff) == 0:
         diff = None
